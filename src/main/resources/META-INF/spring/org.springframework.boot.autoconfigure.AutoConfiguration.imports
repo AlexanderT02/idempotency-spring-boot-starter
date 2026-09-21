@@ -1,1 +1,1 @@
-dev.idem.idempotency.autoconfigure.IdempotencyAutoConfiguration
+io.github.alexandert02.idempotency.autoconfigure.IdempotencyAutoConfiguration

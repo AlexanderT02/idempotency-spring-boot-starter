@@ -9,7 +9,7 @@ response or receive a conflict while the first request is running.
 
 ```xml
 <dependency>
-    <groupId>dev.idem</groupId>
+    <groupId>io.github.alexandert02</groupId>
     <artifactId>idempotency-spring-boot-starter</artifactId>
     <version>1.0.0</version>
 </dependency>
@@ -161,7 +161,7 @@ The test JAR contains a reusable concurrency contract:
 
 ```xml
 <dependency>
-    <groupId>dev.idem</groupId>
+    <groupId>io.github.alexandert02</groupId>
     <artifactId>idempotency-spring-boot-starter</artifactId>
     <version>1.0.0</version>
     <type>test-jar</type>
