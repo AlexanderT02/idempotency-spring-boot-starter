@@ -93,7 +93,7 @@
                         </goals>
                         <configuration>
                             <includes>
-                                <include>dev/idem/idempotency/store/testing/**</include>
+                                <include>io/github/alexandert02/idempotency/store/testing/**</include>
                             </includes>
                         </configuration>
                     </execution>
