@@ -7,16 +7,16 @@ import java.security.NoSuchAlgorithmException;
 import java.util.HexFormat;
 
 /** Creates unambiguous SHA-256 hashes from multiple values. */
-final class Sha256Digest {
+public final class Sha256Digest {
 
     private Sha256Digest() {
     }
 
-    static byte[] utf8(String value) {
+    public static byte[] utf8(String value) {
         return value.getBytes(StandardCharsets.UTF_8);
     }
 
-    static String hash(byte[]... values) {
+    public static String hash(byte[]... values) {
         try {
             MessageDigest digest = MessageDigest.getInstance("SHA-256");
             for (byte[] value : values) {

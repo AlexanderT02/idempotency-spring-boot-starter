@@ -1,4 +1,4 @@
-package io.github.alexandert02.idempotency.store.support;
+package io.github.alexandert02.idempotency.store;
 
 import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;
@@ -6,7 +6,6 @@ import java.io.IOException;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 
-import io.github.alexandert02.idempotency.store.IdempotencyRecord;
 
 /** Base for backends that store Java-serialized {@code byte[]} values. */
 public abstract class BinaryIdempotencyStore extends AbstractIdempotencyStore<byte[]> {

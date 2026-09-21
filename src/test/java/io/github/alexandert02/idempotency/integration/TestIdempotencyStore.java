@@ -5,7 +5,7 @@ import java.util.concurrent.ConcurrentHashMap;
 import static java.util.Objects.isNull;
 
 import io.github.alexandert02.idempotency.store.IdempotencyRecord;
-import io.github.alexandert02.idempotency.store.support.ObjectIdempotencyStore;
+import io.github.alexandert02.idempotency.store.ObjectIdempotencyStore;
 
 final class TestIdempotencyStore extends ObjectIdempotencyStore {
 

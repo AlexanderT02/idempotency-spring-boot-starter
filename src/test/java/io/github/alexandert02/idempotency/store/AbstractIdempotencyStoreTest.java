@@ -1,4 +1,4 @@
-package io.github.alexandert02.idempotency.store.support;
+package io.github.alexandert02.idempotency.store;
 
 import java.nio.charset.StandardCharsets;
 import java.time.Duration;
@@ -6,10 +6,7 @@ import java.util.Map;
 import static java.util.Objects.isNull;
 import java.util.concurrent.ConcurrentHashMap;
 
-import io.github.alexandert02.idempotency.store.CapturedResponse;
-import io.github.alexandert02.idempotency.store.IdempotencyRecord;
-import io.github.alexandert02.idempotency.store.IdempotencyRecord.State;
-import io.github.alexandert02.idempotency.store.IdempotencyStore;
+import static io.github.alexandert02.idempotency.store.IdempotencyRecord.State;
 
 import org.junit.jupiter.api.Test;
 

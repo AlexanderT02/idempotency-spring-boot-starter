@@ -1,6 +1,8 @@
-package io.github.alexandert02.idempotency.internal.web;
+package io.github.alexandert02.idempotency.internal.web.resolver;
 
 import io.github.alexandert02.idempotency.IdempotencyFingerprintResolver;
+import io.github.alexandert02.idempotency.internal.web.Sha256Digest;
+import io.github.alexandert02.idempotency.internal.web.wrapper.CachedBodyRequestWrapper;
 
 import jakarta.servlet.http.HttpServletRequest;
 import org.springframework.web.method.HandlerMethod;

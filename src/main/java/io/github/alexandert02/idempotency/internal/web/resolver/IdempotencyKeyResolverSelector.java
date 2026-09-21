@@ -1,4 +1,4 @@
-package io.github.alexandert02.idempotency.internal.web;
+package io.github.alexandert02.idempotency.internal.web.resolver;
 
 import io.github.alexandert02.idempotency.IdempotencyKeyResolver;
 
@@ -17,7 +17,7 @@ public final class IdempotencyKeyResolverSelector {
         this.defaultResolver = beanFactory.getBeanProvider(IdempotencyKeyResolver.class).getObject();
     }
 
-    IdempotencyKeyResolver select(String qualifier) {
+    public IdempotencyKeyResolver select(String qualifier) {
         if (StringUtils.hasText(qualifier)) {
             return BeanFactoryAnnotationUtils.qualifiedBeanOfType(
                     beanFactory, IdempotencyKeyResolver.class, qualifier);

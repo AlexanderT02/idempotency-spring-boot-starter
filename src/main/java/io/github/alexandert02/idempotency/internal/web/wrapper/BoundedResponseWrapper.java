@@ -1,4 +1,4 @@
-package io.github.alexandert02.idempotency.internal.web;
+package io.github.alexandert02.idempotency.internal.web.wrapper;
 
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
@@ -14,7 +14,7 @@ import jakarta.servlet.http.HttpServletResponse;
 import jakarta.servlet.http.HttpServletResponseWrapper;
 
 /** Captures a bounded response body while writing through to the client. */
-final class BoundedResponseWrapper extends HttpServletResponseWrapper {
+public final class BoundedResponseWrapper extends HttpServletResponseWrapper {
 
     private final int maxBodySize;
     private final ByteArrayOutputStream captured;
@@ -22,7 +22,7 @@ final class BoundedResponseWrapper extends HttpServletResponseWrapper {
     private PrintWriter writer;
     private boolean limitExceeded;
 
-    BoundedResponseWrapper(HttpServletResponse response, int maxBodySize) {
+    public BoundedResponseWrapper(HttpServletResponse response, int maxBodySize) {
         super(response);
         if (maxBodySize <= 0) {
             throw new IllegalArgumentException("maxBodySize must be positive");
@@ -54,17 +54,17 @@ final class BoundedResponseWrapper extends HttpServletResponseWrapper {
         return writer;
     }
 
-    byte[] capturedBody() {
+    public byte[] capturedBody() {
         flushWriter();
         return captured.toByteArray();
     }
 
-    boolean limitExceeded() {
+    public boolean limitExceeded() {
         flushWriter();
         return limitExceeded;
     }
 
-    void flushPendingWriter() {
+    public void flushPendingWriter() {
         flushWriter();
     }
 

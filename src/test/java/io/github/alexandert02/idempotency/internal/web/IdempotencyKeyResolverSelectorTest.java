@@ -1,5 +1,7 @@
 package io.github.alexandert02.idempotency.internal.web;
 
+import io.github.alexandert02.idempotency.internal.web.resolver.IdempotencyKeyResolverSelector;
+
 import io.github.alexandert02.idempotency.IdempotencyKeyResolver;
 
 import org.junit.jupiter.api.Test;

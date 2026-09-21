@@ -3,10 +3,10 @@ package io.github.alexandert02.idempotency.autoconfigure;
 import io.github.alexandert02.idempotency.IdempotencyFingerprintResolver;
 import io.github.alexandert02.idempotency.internal.metrics.IdempotencyMetrics;
 import io.github.alexandert02.idempotency.internal.metrics.MicrometerIdempotencyMetrics;
-import io.github.alexandert02.idempotency.internal.web.DefaultIdempotencyFingerprintResolver;
+import io.github.alexandert02.idempotency.internal.web.resolver.DefaultIdempotencyFingerprintResolver;
 import io.github.alexandert02.idempotency.internal.web.IdempotencyFilter;
 import io.github.alexandert02.idempotency.internal.web.IdempotencyInterceptor;
-import io.github.alexandert02.idempotency.internal.web.IdempotencyKeyResolverSelector;
+import io.github.alexandert02.idempotency.internal.web.resolver.IdempotencyKeyResolverSelector;
 import io.github.alexandert02.idempotency.store.IdempotencyStore;
 
 import io.micrometer.core.instrument.MeterRegistry;

@@ -20,6 +20,8 @@ import io.github.alexandert02.idempotency.store.CapturedResponse;
 import io.github.alexandert02.idempotency.store.ClaimResult;
 import io.github.alexandert02.idempotency.store.IdempotencyRecord;
 import io.github.alexandert02.idempotency.store.IdempotencyStore;
+import io.github.alexandert02.idempotency.internal.web.wrapper.BoundedResponseWrapper;
+import io.github.alexandert02.idempotency.internal.web.wrapper.CachedBodyRequestWrapper;
 
 import org.springframework.util.StringUtils;
 import org.springframework.web.method.HandlerMethod;

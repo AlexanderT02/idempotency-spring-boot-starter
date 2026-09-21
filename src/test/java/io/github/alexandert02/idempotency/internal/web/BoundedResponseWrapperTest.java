@@ -1,5 +1,7 @@
 package io.github.alexandert02.idempotency.internal.web;
 
+import io.github.alexandert02.idempotency.internal.web.wrapper.BoundedResponseWrapper;
+
 import java.nio.charset.StandardCharsets;
 
 import org.junit.jupiter.api.Test;

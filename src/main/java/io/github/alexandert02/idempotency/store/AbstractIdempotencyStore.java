@@ -1,4 +1,4 @@
-package io.github.alexandert02.idempotency.store.support;
+package io.github.alexandert02.idempotency.store;
 
 import java.time.Duration;
 import java.util.Optional;
@@ -6,10 +6,6 @@ import java.util.function.Function;
 
 import static java.util.Objects.isNull;
 import static java.util.Objects.requireNonNull;
-
-import io.github.alexandert02.idempotency.store.ClaimResult;
-import io.github.alexandert02.idempotency.store.IdempotencyRecord;
-import io.github.alexandert02.idempotency.store.IdempotencyStore;
 
 /**
  * Base for idempotency stores backed by a key-value system.

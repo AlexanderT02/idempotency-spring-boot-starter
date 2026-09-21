@@ -1,4 +1,4 @@
-package io.github.alexandert02.idempotency.internal.web;
+package io.github.alexandert02.idempotency.internal.web.wrapper;
 
 import java.io.BufferedReader;
 import java.io.ByteArrayInputStream;
@@ -16,11 +16,11 @@ import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletRequestWrapper;
 
 /** Request wrapper whose body can be read more than once. */
-final class CachedBodyRequestWrapper extends HttpServletRequestWrapper {
+public final class CachedBodyRequestWrapper extends HttpServletRequestWrapper {
 
     private final byte[] body;
 
-    CachedBodyRequestWrapper(HttpServletRequest request, int maxBodySize) throws IOException {
+    public CachedBodyRequestWrapper(HttpServletRequest request, int maxBodySize) throws IOException {
         super(request);
         this.body = readBody(request, maxBodySize);
     }
@@ -40,7 +40,7 @@ final class CachedBodyRequestWrapper extends HttpServletRequestWrapper {
         }
     }
 
-    byte[] getBody() {
+    public byte[] getBody() {
         return body;
     }
 
@@ -77,7 +77,7 @@ final class CachedBodyRequestWrapper extends HttpServletRequestWrapper {
         return new BufferedReader(new InputStreamReader(new ByteArrayInputStream(body), charset));
     }
 
-    static final class BodyTooLargeException extends IOException {
+    public static final class BodyTooLargeException extends IOException {
         @Serial
         private static final long serialVersionUID = 1L;
     }

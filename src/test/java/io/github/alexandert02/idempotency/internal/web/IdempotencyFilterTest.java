@@ -6,6 +6,9 @@ import static java.util.Objects.isNull;
 import io.github.alexandert02.idempotency.Idempotent;
 import io.github.alexandert02.idempotency.IdempotencyKeyResolver;
 import io.github.alexandert02.idempotency.internal.metrics.IdempotencyMetrics;
+import io.github.alexandert02.idempotency.internal.web.resolver.IdempotencyKeyResolverSelector;
+import io.github.alexandert02.idempotency.internal.web.wrapper.BoundedResponseWrapper;
+import io.github.alexandert02.idempotency.internal.web.wrapper.CachedBodyRequestWrapper;
 
 import org.junit.jupiter.api.Test;
 

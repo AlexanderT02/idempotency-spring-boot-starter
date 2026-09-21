@@ -17,6 +17,9 @@ import jakarta.servlet.http.HttpServletResponse;
 
 import io.github.alexandert02.idempotency.Idempotent;
 import io.github.alexandert02.idempotency.internal.metrics.IdempotencyMetrics;
+import io.github.alexandert02.idempotency.internal.web.resolver.IdempotencyKeyResolverSelector;
+import io.github.alexandert02.idempotency.internal.web.wrapper.BoundedResponseWrapper;
+import io.github.alexandert02.idempotency.internal.web.wrapper.CachedBodyRequestWrapper;
 
 import org.springframework.core.Ordered;
 import org.springframework.core.ResolvableType;
